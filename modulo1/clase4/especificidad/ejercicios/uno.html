@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Especificidad CSS</title>
+    <style>
+
+        #header .nav-item {
+            color: red;   
+        }
+
+        .nav-item.active {
+            color: blue;  
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="nav-item">
+            Texto ejemplo
+        </div>
+        <div class="nav-item active">
+            Texto ejemplo
+        </div>
+    </div>
+</body>
+</html>

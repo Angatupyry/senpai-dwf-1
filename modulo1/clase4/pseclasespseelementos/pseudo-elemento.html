@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+          p::first-line {
+            color: red;
+            text-decoration: none;
+          }
+
+          p::selection {
+            background: #21acde;
+            color: white;
+          }
+
+          ul li {
+            display: inline;
+          }
+
+          ul li::after {
+            color: #21acde;
+            content: " | ";
+            display: inline-block;
+          }
+    </style>
+    <p>
+        Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit. 
+        Vestibulum mollis leo in turpis interdum, 
+        at pharetra velit elementum. 
+        Nam eget lacus sed lacus dictum scelerisque. 
+        Proin porta ligula sed mi semper, vel interdum massa auctor. 
+        Pellentesque et massa congue, tincidunt erat ac, tincidunt elit. 
+        Sed ac dolor metus. Nam commodo metus sed ligula consectetur interdum. 
+        Curabitur odio est, tempor id egestas nec, aliquam at nisl.
+    </p>
+
+
+    <ul>
+        <li>Uno</li>
+        <li>Dos</li>
+        <li>Tres</li>
+    </ul>
+</body>
+</html>
