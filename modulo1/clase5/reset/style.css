@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: cadetblue;
+}
+
+
+/* A modo de practica para repasar especificidad */
+/* h1 con title */
+h1 {
+    color: purple;
+    font-family: serif;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 18px;
+    font-family: monospace;
+}
+
+
+.nav {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.nav a  {
+    color: wheat;
+    background-color: brown;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.nav .blog {
+    background-color: yellowgreen;
+}
+
+
