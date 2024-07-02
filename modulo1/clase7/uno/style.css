@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: cadetblue;
+}
+
+.container {
+    background-color: aquamarine;
+    border: 3px solid black;
+    display: grid;
+    /* grid-template-columns: 100px 100px 100px; */
+    /* grid-template-columns: 2fr 4fr 1fr;   */
+    /* grid-template-columns: 2fr 100px 20px; */
+    /* fr = 100 % - 100 - 20 */
+    /* grid-template-rows: 100px 20px 10px; */
+    /* grid-auto-rows: 100px; */
+
+    /* grid-template-columns: 25px 50px 25px 50px 25px 50px */
+    /* Evita lo de arriba */
+    /* grid-template-columns: repeat(2, 25px 50px) */
+    grid-template-columns: repeat(2, 1fr);
+
+    /* row-gap: 10px;
+    column-gap: 10px; */
+    /* gap: 10px; */
+
+}
+
+
+
+.container div {
+    background-color: blueviolet;
+    border: 2px solid saddlebrown;
+}
+
+.container div:first-child {
+    background-color: green;
+    border: 2px solid brown;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    /* grid-row-start: 1;
+    grid-row-end: 3;  */
+  /* Equivalente al de arriba */
+    /* grid-row-start: span 2; */
+
+    /* grid-column: 2 / 4; */
+    
+}
+
+.container div:first-child {
+    grid-column: 2 / 4;    
+    grid-row: 2 / 3 ;
+}
+
+.container div:nth-child(2) {
+    background-color: green;
+    border: 2px solid brown;
+    grid-column: 1 / 4;
+}
+
+

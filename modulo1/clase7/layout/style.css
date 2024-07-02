@@ -1,0 +1,67 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+/*
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    min-height: 100vh;
+}
+
+
+ .container header {
+    background-color: blueviolet;
+    grid-column: 1 / -1;
+}
+
+.container aside {
+    background-color:aqua;
+}
+
+
+.container main {
+    background-color: tomato;
+    grid-column: span 2;
+}
+
+.container footer {
+    background-color: brown;
+    grid-column: 1 / -1;
+} */
+
+
+/* ***** Áreas ***** */
+.container {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    min-height: 100vh;
+    grid-template-areas: 
+    "ronaldinho ronaldinho ronaldinho"
+    "aside main main"
+    "footer footer footer";
+}
+
+.container header {
+    background-color: blueviolet;
+    grid-area: ronaldinho;
+
+}
+
+.container aside {
+    background-color:aqua;
+    grid-area: aside;
+}
+
+
+.container main {
+    background-color: tomato;
+    grid-area: main;
+}
+
+.container footer {
+    background-color: brown;
+    grid-area: footer;
+} 
