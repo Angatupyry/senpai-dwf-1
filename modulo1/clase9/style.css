@@ -1,0 +1,146 @@
+:root {
+    --blue: #041D2E;
+    --lightBlue: #15A699;
+    --green: #87D47F;
+    --yellow: #F7E194;
+    --red: #E8593F;
+    --gap: 15px;
+}  
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Un grid de dos columnas y dos filas */
+/* El nav ocuparía dos columnas */
+html {
+  min-height: 100vh;
+} 
+
+body {
+  display: grid;
+  grid-template-columns: 3fr 1.2fr;
+  grid-template-rows: 1fr 40px;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  grid-template-areas: 
+    "header aside"
+    "nav nav";
+  color: white;
+}
+
+header {
+  display: grid;
+  grid-area: header;
+  background-color: var(--blue);
+  justify-items: center;
+  align-items: center;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 1px 1px 3px var(--lightBlue);
+  font-size: 2rem;
+  padding: var(--gap);
+}
+
+h2 {
+    margin-bottom: var(--gap);
+}
+h1 {
+    font-weight: normal;
+}
+
+aside {
+    display: grid;
+    grid-area: aside;
+    background-color: var(--red);
+    align-content: center;
+    padding: var(--gap);
+}
+
+aside > img {
+   max-width: 60%;
+   margin: 0 auto;
+}
+
+#subscribe {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  height: 40px;
+  box-shadow: 0px 2px 12px rgba(0,0,0,.3);
+  /* Vean el video si no se acuerdan de esto :D 19:22 horas */
+  /* grid-auto-flow: column; */
+}
+
+input {
+  border: none;
+  padding: 5px 8px;
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  background-color: var(--yellow);
+  color: var(--blue);
+  font-weight: bold;
+}
+
+nav {
+    display: grid;
+    grid-area: nav;
+    background-color: var(--lightBlue);
+    justify-items: center;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    gap: 2;
+}
+
+li {
+    padding: 0 var(--gap);
+}
+
+.aside-parr {
+  margin-bottom: 15px;
+}
+
+
+
+@media (max-width: 950px) {
+  header {
+    font-size: 1.5rem;
+  }
+
+  #subscribe {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 40px);
+    height: 80px;
+  }
+}
+
+@media (max-width: 900px) { 
+   body {
+    grid-template-columns: 1fr;
+    grid-template-areas: "nav" "header" "aside";
+    grid-template-rows: 40px 1fr 1.2fr;
+  }
+
+  input {
+    height: 80px;
+  }
+  
+  aside > img {
+    display: none;
+  }
+
+
+  nav {
+    
+    background-color: green;
+}
+
+}
