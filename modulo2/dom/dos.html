@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+        background-color: cadetblue;
+    }
+    </style>
+<body>
+    <input type="text" id="text-input" />
+    <button id="add-button" onClick="agregarElemento">AGREGAR ELEMENTO</button>
+    <button id="reset-button">ELIMINAR ELEMENTOS</button>
+    <main class = "container" id="page-main"></main>
+</body>
+<script>
+    const input = document.getElementById("text-input");
+    const addButton = document.getElementById("add-button");
+    const main = document.getElementById("page-main");
+
+    // how to get reset button?
+    // how to use event listener?
+    // what is the difference between onClick and addEventListener?
+    
+    // TODO Get reset button 
+
+    function agregarElemento () {
+        if(input.value === "") {
+            return;
+        }
+
+        const newElement = document.createElement("p");
+        newElement.textContent = input.value;
+
+        main.appendChild(newElement);
+
+        input.value = "";
+    }
+
+    // 
+    // Create function to delete the new element
+    // 
+
+    addButton.addEventListener("click", agregarElemento);
+
+    // TODO Add rest button listener
+    
+
+
+    
+</script>
+</html>

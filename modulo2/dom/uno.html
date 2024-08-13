@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo - Crear elemento</title>
+  </head>
+  <body>
+    <style>
+        body {
+        background-color: cadetblue;
+    }
+    </style>
+    <header id="page-header">HEADER</header>
+    <main id="page-main">
+      <h1>MAIN TITLE</h1>
+      <article>MAIN ARTICLE</article>
+    </main>
+    <footer id="page-footer" class="a b c">
+      <ul>
+        <li>FOOTER 1</li>
+        <li>FOOTER 2</li>
+        <li>FOOTER 3</li>
+      </ul>
+    </footer>
+    <script>
+        const main = document.getElementById("page-main");
+        const header = document.getElementById("page-header");
+        const footer =  document.getElementById("page-footer");
+        
+        const footerList = document.querySelector("footer > ul");
+        
+    
+        const newFooterLi = document.createElement("li");
+        newFooterLi.textContent = "Footer 4";
+
+        footerList.appendChild(newFooterLi);
+
+
+        const pBeforeBegin = document.createElement("p");
+
+        pBeforeBegin.textContent = "Insertado antes del elemento main";
+
+        main.insertAdjacentElement("beforebegin", pBeforeBegin);
+
+
+    </script>
+  </body>
+</html>
