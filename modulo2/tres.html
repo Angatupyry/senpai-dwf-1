@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+/**
+ * Se ingresan tres valores por teclado,
+ * si todos son iguales se imprime la suma del primero con el segundo
+ * y a este resultado se lo multiplica por el tercero
+ * (tener en cuenta que puede haber tres condiciones simples).
+ * En el caso que no sean iguales, solo indica que los números no son iguales
+ */
+        const valorA = parseInt(prompt("Ingrese valor 1:"))
+        const valorB = parseInt(prompt("Ingrese valor 2:"))
+        const valorC = parseInt(prompt("Ingrese valor 3:"))
+
+        const todosIguales = valorA === valorB && valorB === valorC
+        if(todosIguales){
+            const sumaPrimeroConSegundo = valorA + valorB;
+            const resultado = sumaPrimeroConSegundo * valorC
+            console.log(resultado);
+        } else {
+            console.log("asdf");
+        }
+
+
+    </script>
+</body>
+</html>
