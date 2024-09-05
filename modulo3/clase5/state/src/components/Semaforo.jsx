@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./semaforo.css";
 
 export const Semaforo = () => {
@@ -8,6 +8,15 @@ export const Semaforo = () => {
   const changeColor = (item) => {
     setColorSemaforo(item);
   };
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setColorSemaforo((prevColor) => {
+  //       const nextIndex = (colors.indexOf(prevColor) + 1) % colors.length;
+  //       return colors[nextIndex];
+  //     });
+  //   }, 1000);
+  // }, [colorSemaforo]);
 
   return (
     <div className='App'>
