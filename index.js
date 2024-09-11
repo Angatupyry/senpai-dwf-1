@@ -1,7 +1,9 @@
-const persona = { nombre: "César", edad: 17.5 };
+const actualizarEstado = (estado, nuevoValor) => {
+  estado = nuevoValor;
+  return estado;
+};
 
-const { nombre, edad } = persona;
-
-console.log(nombre);
-
-console.log(edad);
+const useState = (initialValue) => {
+  actualizarEstado(initialValue);
+  return [initialValue, actualizarEstado("")];
+};
