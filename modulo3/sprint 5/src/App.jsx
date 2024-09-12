@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 import items from "./data";
+import { Categories } from "./components/Categories";
 
 function App() {
-  const allCategories = ["all", ...new Set(items.map((item) => item.category))];
+  const categories = ["all", ...new Set(items.map((item) => item.category))];
 
   return (
     <main>
@@ -12,17 +13,7 @@ function App() {
           <h2>Our menu</h2>
           <div className='underline'></div>
         </div>
-        <div className='btn-container'>
-          <button type='button' className='filter-btn'>
-            All
-          </button>
-          <button type='button' className='filter-btn'>
-            Breakfast
-          </button>
-          <button type='button' className='filter-btn'>
-            Lunch
-          </button>
-        </div>
+        <Categories menuList={categories} />
         <div className='section-center'>
           <article className='menu-item'>
             <img src={items[0].img} className='photo' />
