@@ -2,9 +2,21 @@ import { useState } from "react";
 import "./App.css";
 import items from "./data";
 import { Categories } from "./components/Categories";
+import { Menu } from "./components/Menu";
 
 function App() {
   const categories = ["all", ...new Set(items.map((item) => item.category))];
+  const [menus, setMenus] = useState(items);
+
+  const filterMenu = (category) => {
+    if (category === "all") {
+      setMenus(items);
+      return;
+    }
+    const newItems = items.filter((item) => item.category === category);
+
+    setMenus(newItems);
+  };
 
   return (
     <main>
@@ -13,19 +25,8 @@ function App() {
           <h2>Our menu</h2>
           <div className='underline'></div>
         </div>
-        <Categories menuList={categories} />
-        <div className='section-center'>
-          <article className='menu-item'>
-            <img src={items[0].img} className='photo' />
-            <div className='item-info'>
-              <header>
-                <h4>{items[0].title}</h4>
-                <h4 className='price'>{items[0].price}</h4>
-              </header>
-              <p className='item-text'>{items[0].desc}</p>
-            </div>
-          </article>
-        </div>
+        <Categories menuList={categories} filterItems={filterMenu} />
+        <Menu menus={menus} />
       </section>
     </main>
   );
