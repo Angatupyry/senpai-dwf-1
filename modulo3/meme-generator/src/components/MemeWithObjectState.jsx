@@ -12,10 +12,16 @@ export const MemeWithObject = () => {
     const memesArray = memesData.data.memes;
     const randomNumber = Math.floor(Math.random() * memesArray.length);
     const url = memesArray[randomNumber].url;
+
+    setMeme((prevMeme) => ({
+      ...prevMeme,
+      randomImage: url,
+    }));
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     setMeme((prevMeme) => ({
       ...prevMeme,
       [name]: value,
