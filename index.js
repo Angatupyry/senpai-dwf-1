@@ -1,9 +1,5 @@
-const actualizarEstado = (estado, nuevoValor) => {
-  estado = nuevoValor;
-  return estado;
-};
+async function getMemeDate() {
+  const res = await fetch("https://api.imgflip.com/get_memes");
 
-const useState = (initialValue) => {
-  actualizarEstado(initialValue);
-  return [initialValue, actualizarEstado("")];
-};
+  const data = await res.json();
+}
